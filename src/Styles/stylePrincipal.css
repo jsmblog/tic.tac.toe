@@ -1,0 +1,129 @@
+.App {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    height: 100px;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  
+  .message {
+    margin-top: 20px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+  .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    height: 100px;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  .NameGame {
+    padding: 0.5rem 0;
+    font-size: 50px;
+    background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(05deg, #9DF1DF ,  #FFEA20 );
+  }
+  .x-turn {
+    background-color: #FDFDBD;
+  }
+  
+  .o-turn {
+    background-color: #93C6E7;
+  }
+  .TurnUser {
+    font-weight: bold;
+    padding: .5rem 0;
+    background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(05deg, #9DF1DF ,  #FFEA20 );
+  }
+  .message {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+  .TurnUser span {
+    color: #C780FA;
+  }
+  .message{
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(05deg, #9DF1DF ,  #FFEA20 );
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+ .message button {
+    color: #2192FF;
+    background-color: #FDFDBD;
+ }
+ .Form {
+    box-shadow: 0 0 15px 1px #FFEA20;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    justify-content: center;
+ }
+ .registration-form {
+    background-image: url("/src/img/back.png");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.733);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+ }
+ .registration-form h2 {
+    color: #fdfdbde1;
+ }
+ .registration-form  button {
+    background-color: #2192FF;
+ }
+ .BtnPauseAndRep {
+    width: 2.2rem;
+    position: absolute;
+    top: 5rem;
+    right: .5rem;
+    background-color: #2192FF;
+ }
