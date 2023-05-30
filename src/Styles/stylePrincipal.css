@@ -15,11 +15,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f3f3f3;
-    border: 1px solid #ccc;
+    background-color: #f3f3f3e1;
+    border: 1px solid #FDFDBD;
     height: 100px;
     cursor: pointer;
     font-size: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 1px #2194ffd8;
+  }
+  .cell:hover {
+    border: 2px solid #C780FA;
   }
   
   .message {
@@ -35,15 +40,6 @@
     color: #fff;
     border: none;
     border-radius: 4px;
-  }
-  .cell {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ccc;
-    height: 100px;
-    cursor: pointer;
-    font-size: 2rem;
   }
   .NameGame {
     padding: 0.5rem 0;
@@ -121,9 +117,8 @@
     background-color: #2192FF;
  }
  .BtnPauseAndRep {
-    width: 2.2rem;
-    position: absolute;
-    top: 5rem;
-    right: .5rem;
+    width: 3rem;
+    height: 3rem;
+  margin-top: 5rem;
     background-color: #2192FF;
  }

@@ -130,7 +130,7 @@ const App = () => {
           <>
             {<div className="App">
       <h1 className='NameGame'>Tic Tac Toe</h1>
-      <p className='TurnUser'>Turno de: <span> {currentPlayer}</span></p>
+      <p className='TurnUser'>Turno de:  <span> {currentPlayer}</span></p>
       <div className="board">
         {board.map((_, index) => renderCell(index))}
       </div>
