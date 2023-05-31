@@ -60,6 +60,25 @@ const App = () => {
     }
   };
 
+  const getOppositeCorner = (currentBoard, player) => {
+    const oppositeCorners = { 0: 8, 2: 6, 6: 2, 8: 0 };
+    const playerCorners = currentBoard.reduce((corners, cell, index) => {
+      if (cell.player === player && corners.includes(index)) {
+        return [...corners, index];
+      }
+      return corners;
+    }, []);
+
+    for (let i = 0; i < playerCorners.length; i++) {
+      const oppositeCorner = oppositeCorners[playerCorners[i]];
+      if (oppositeCorner !== undefined && currentBoard[oppositeCorner].player === null) {
+        return oppositeCorner;
+      }
+    }
+
+    return null;
+  };
+
   const calculateComputerMove = () => {
     const emptyCells = board.reduce((cells, cell, index) => {
       if (!cell.player) {
@@ -98,6 +117,13 @@ const App = () => {
       if (emptyCorners.length > 0) {
         const randomCorner = emptyCorners[Math.floor(Math.random() * emptyCorners.length)];
         makeMove(randomCorner);
+        return;
+      }
+
+      // Make a move in the opposite corner if available
+      const oppositeCorner = getOppositeCorner(board, currentPlayer);
+      if (oppositeCorner !== null && emptyCells.includes(oppositeCorner)) {
+        makeMove(oppositeCorner);
         return;
       }
 
